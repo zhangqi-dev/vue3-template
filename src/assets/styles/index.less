@@ -1,0 +1,72 @@
+// less可以省略扩展名
+@import '_normalize';
+// 主要变量
+@import '_variables';
+// 混合
+@import '_mixin';
+// 函数
+@import '_functions.less';
+
+@import 'login';
+
+@import 'home';
+
+@import 'apply-list';
+
+//vant 设置 全局变量
+:root {
+	// 覆盖 vant的变量样式
+	--van-blue: #0d68fe !important;
+	//vant 默认字体大小
+	--van-font-size-md: 30px !important;
+	--van-button-background-color: linear-gradient(180deg, #599bff 0%, #0d68fe 100%);
+	--van-button-primary-background-color: var(--van-button-background-color) !important;
+	--van-button-border-width: 0px !important;
+}
+
+// .banner{
+//   .spacing(padding, @padding-default,@padding-default,@padding-default,@padding-default)
+// }
+
+.send-code {
+	.font-mixin(28px, 400, @primary-color);
+}
+.count-down {
+	&:extend(.send-code);
+	color: #ccc;
+}
+
+.agreement-content {
+		position: relative;
+		.spacing(padding, 40px);
+		.title {
+			text-align: center;
+			.font-mixin(30px, 500, #222);
+			.spacing(padding, 10px, 0, 20px, 0);
+		}
+		.content {
+			max-height: 60vh;
+			overflow-y: auto;
+			.spacing(padding, 20px, 20px, 40px, 20px);
+		}
+		.close-dialog {
+			position: absolute;
+			right: 25px;
+			top: 25px;
+			& + .title {
+				text-align: left;
+			}
+		}
+		.sales-code-input {
+			background: #f4f4f4;
+			border-radius: 8px;
+			margin-top: 10px;
+			.code-input {
+				background-color: #f4f4f4 !important;
+			}
+		}
+		.tip {
+			.font-mixin(26px, 400, #999);
+			.spacing(padding, 20px, 0, 40px, 0);
+		}
+	}

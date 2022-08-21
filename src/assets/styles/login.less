@@ -1,0 +1,61 @@
+.login-container {
+	h3 {
+		.spacing(padding, 60px, 40px);
+		.font-mixin(48px, 500, #333);
+	}
+	.login-form {
+		.spacing(padding, 10px);
+	}
+	.send-code {
+		.font-mixin(28px, 400, @primary-color);
+	}
+	.count-down {
+		// &:extend(.send-code);
+		color: #ccc;
+	}
+	.tip {
+		.font-mixin(24px, 400, #666);
+		.spacing(padding, 30px, 24px);
+		span {
+			color: @primary-color;
+		}
+	}
+	.login-space {
+		.spacing(padding, 20px, 0);
+	}
+	.agreement-content {
+		position: relative;
+		.spacing(padding, 40px);
+		.title {
+			text-align: center;
+			.font-mixin(30px, 500, #222);
+			.spacing(padding, 10px, 0, 20px, 0);
+		}
+		.content {
+			max-height: 60vh;
+			overflow-y: auto;
+			.spacing(padding, 20px, 20px, 40px, 20px);
+		}
+		.close-dialog {
+			position: absolute;
+			right: 25px;
+			top: 25px;
+			& + .title {
+				text-align: left;
+			}
+		}
+		.sales-code-input {
+			background: #f4f4f4;
+			border-radius: 8px;
+			margin-top: 10px;
+			.code-input {
+				background-color: #f4f4f4 !important;
+			}
+		}
+		.tip {
+			.font-mixin(26px, 400, #999);
+			.spacing(padding, 20px, 0, 40px, 0);
+		}
+	}
+    
+}

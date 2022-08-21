@@ -1,0 +1,35 @@
+// 通用mixin
+.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+// margin padding 通用 
+// 如果边距都相同，可以采用两个参数
+.spacing(@property, @space: 10){
+    @{property}: @space;
+}
+// 设置y,x边距 默认值为10
+.spacing(@property, @y: 10, @x: 10){
+    @{property}: @y @x;
+}
+// 如果边距不同采用 四边设置
+.spacing(@property, @space-top, @space-right, @space-bottom, @space-left){
+    @{property}-top: @space-top;
+    @{property}-right: @space-right;
+    @{property}-bottom: @space-bottom;
+    @{property}-left: @space-left;
+}
+
+// 通用宽高
+.x-and-y(@width, @height){
+   width: @width;
+   height: @height;
+}
+
+// 字体
+.font-mixin(@font-size, @font-weight, @color){
+   font-size: @font-size;
+   font-weight: @font-weight;
+   color: @color;
+}
